@@ -1,0 +1,13 @@
+class Solution(object):
+    def singleNumber(self, nums):
+        """
+        :type nums: List[int]
+        :rtype: int
+        """
+        counter = 0
+        
+        for element in nums:
+            counter = nums.count(element)
+            if counter != 1:
+                continue
+            return element
